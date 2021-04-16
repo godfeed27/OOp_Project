@@ -1,5 +1,3 @@
-import javax.xml.namespace.QName;
-
 public class Inform {
     private String name;
     private String address;
