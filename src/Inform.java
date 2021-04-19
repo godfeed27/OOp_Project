@@ -16,9 +16,4 @@ public class Inform {
     public void setAddress(String address) {
         this.address = address;
     }
-
-    public static void main(String[] args) {
-        Inform a = new Inform("QA", "address", "phone", "email");
-        System.out.println(a.toString());
-    }
 }
