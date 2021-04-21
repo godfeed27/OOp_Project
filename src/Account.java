@@ -1,4 +1,4 @@
-public abstract class Account {
+public class Account {
     private Double SoDu;
     private String STK;
     private String PassWord;
