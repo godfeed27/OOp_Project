@@ -71,11 +71,4 @@ public class List_Account {
         }
         return x;
     }
-
-    public static void main(String[] args) throws IOException, ParseException {
-        List_Account a = new List_Account();
-        a.Create();
-        System.out.println(a.lst.get(a.getAccount("1234")));
-        a.display();
-    }
 }

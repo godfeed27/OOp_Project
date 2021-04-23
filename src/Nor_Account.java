@@ -5,6 +5,10 @@ public class Nor_Account extends Account {
         this.fee = fee;
     }
 
+    public void setFee(double fee) {
+        this.fee = fee;
+    }
+
     public boolean banking(Account other, Double TienGui) {
         if(other.getClass().getName().equals("Nor_Account")) {
             this.setSoDu(this.getSoDu() - TienGui - this.fee);
