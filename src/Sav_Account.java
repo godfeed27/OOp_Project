@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -59,13 +58,16 @@ public class Sav_Account extends Account {
     public long interestCalc()  {
         double x = 0;
         if (this.rate == 6) {
-            x = this.getSoDu()*Math.pow(1 + 0.004, this.countDay()/30);
+            x = this.getSoDu()/(Math.pow(1 + 0.004, this.countDay()/30));
+			x = x*(Math.pow(1 + 0.004, this.rate));
         }
         else if (this.rate == 12) {
-            x = this.getSoDu()*Math.pow(1 + 0.005, this.countDay()/30);
+            x = this.getSoDu()/(Math.pow(1 + 0.005, this.countDay()/30));
+			x = x*(Math.pow(1 + 0.005, this.rate));
         }
         else {
-            x = this.getSoDu()*Math.pow(1 + 0.006, this.countDay()/30);
+            x = this.getSoDu()/(Math.pow(1 + 0.006, this.countDay()/30));
+			x = x*(Math.pow(1 + 0.006, this.rate));
         }
         return Math.round(x);
     }
