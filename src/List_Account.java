@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+
 public class List_Account {
     ArrayList<Account> lst = new ArrayList<Account>();
 
@@ -22,26 +23,36 @@ public class List_Account {
     }
 
     public void Create() throws IOException, ParseException {
-        File Data = new File("Data/Account.txt");
+        File Data = new File("File Input/Account.txt");
         try {
             BufferedReader data = new BufferedReader(new InputStreamReader(new FileInputStream(Data), "UTF8"));
             String line = data.readLine();
             while (line != null) {
                 int c =Integer.parseInt(line);
                 if (c == 0) {
-                    String STK = data.readLine();
+                    String stk = data.readLine();
                     String passWord = data.readLine();
-                    double SoDu = Double.parseDouble(data.readLine());
-                    double fee = Double.parseDouble(data.readLine());
-                    lst.add(new Nor_Account(STK, passWord, SoDu, fee));
+                    int SoDu = Integer.parseInt(data.readLine());
+                    String name=data.readLine();
+                    Date birthday = new SimpleDateFormat("dd/MM/yyyy").parse(data.readLine());
+                    String address=data.readLine();
+                    String phone=data.readLine();
+                    String email=data.readLine();
+                    int fee = Integer.parseInt(data.readLine());
+                    lst.add(new Nor_Account(stk, passWord,SoDu, name, birthday, address, phone, email, fee));
                 }
                 else {
-                    String STK = data.readLine();
+                    String stk = data.readLine();
                     String passWord = data.readLine();
-                    double SoDu = Double.parseDouble(data.readLine());
-                    int rate = Integer.parseInt(data.readLine());
+                    int SoDu = Integer.parseInt(data.readLine());
+                    String name=data.readLine();
+                    Date birthday = new SimpleDateFormat("dd/MM/yyyy").parse(data.readLine());
+                    String address=data.readLine();
+                    String phone=data.readLine();
+                    String email=data.readLine();
+                    double rate = Double.parseDouble(data.readLine());
                     Date date = new SimpleDateFormat("dd/MM/yyyy").parse(data.readLine());
-                    lst.add(new Sav_Account(STK, passWord, SoDu, rate, date));
+                    lst.add(new Sav_Account(stk, passWord, SoDu, name, birthday, address, phone, email, rate, date));
                 }
                 line = data.readLine();
             }
@@ -54,7 +65,9 @@ public class List_Account {
             e.printStackTrace();
         }
         
-}
+    }
+    
+   
 
     public void display() {
         for(Account i:this.lst) {
@@ -63,7 +76,7 @@ public class List_Account {
     }
 
     public int getAccount(String a) {
-        int x = 0;
+        int x = -1;
         for (Account i:this.lst){
             if(i.getSTK().equals(a)){
                 x = lst.indexOf(i);
@@ -71,4 +84,18 @@ public class List_Account {
         }
         return x;
     }
+    public static void main(String[] args) {
+		List_Account a=new List_Account();
+		try {
+			a.Create();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
 }
