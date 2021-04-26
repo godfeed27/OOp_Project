@@ -21,7 +21,7 @@ dangquanganh_t64@hus.edu.vn
 22/12/2020
 0
 3
-3
+0000
 3600000
 Đặng Quý Anh
 5/8/2001
@@ -31,7 +31,7 @@ dangquyanh_t64@hus.edu.vn
 0
 1
 4
-4
+0
 2022000
 Hoàng Bảo Linh
 8/9/2001
@@ -42,12 +42,22 @@ hoangbaolinh_t64@hus.edu.vn
 25/5/2020
 1
 5
-5
+0
 1000000000
 Lệ Minh
 12/12/2002
 182 Lương Thế Vinh Thanh Xuân Bắc Thanh Xuân Hà Nội
 0456589756
 leminh_t65@hus.edu.vn
-12
-2/6/2020
+6
+2/6/2019
+0
+6
+6
+20000000
+Hoàng Hữu Việt
+1/8/2001
+182 Lương Thế Vinh Thanh Xuân Bắc Thanh Xuân Hà Nội
+0392011001
+hoanganhduc_t64@hus.edu.vn
+0
