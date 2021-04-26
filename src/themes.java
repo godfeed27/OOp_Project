@@ -1,8 +1,5 @@
 
 import javax.swing.*;
-
-
-import java.util.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +8,7 @@ import java.awt.event.ItemListener;
 import java.io.IOException;
 import java.text.ParseException;
 
-	public class themes extends JFrame{
+	public class Themes extends JFrame{
 		
 		//các Container
 		JPanel pn1=new JPanel(new FlowLayout(1, 50, 0));
@@ -80,7 +77,7 @@ import java.text.ParseException;
 		int chi_soAcc=-1;
 		int chi_soAccTo=-1;
     			
-	    public  themes() {
+	    public  Themes() {
 	    	setVisible(true);
 			Dieu_Khien();
 			Dang_nhap_actionPerformed();
@@ -830,7 +827,7 @@ import java.text.ParseException;
 	    }
 		
 	    public static void main(String[] arg) {
-			themes a=new themes();
+			Themes a=new Themes();
 			List_Account A=new List_Account();
 			try {
 				A.Create();

@@ -67,14 +67,6 @@ public class List_Account {
         
     }
     
-   
-
-    public void display() {
-        for(Account i:this.lst) {
-            System.out.println(i.getSTK());
-        }
-    }
-
     public int getAccount(String a) {
         int x = -1;
         for (Account i:this.lst){
@@ -84,18 +76,4 @@ public class List_Account {
         }
         return x;
     }
-    public static void main(String[] args) {
-		List_Account a=new List_Account();
-		try {
-			a.Create();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-	}
 }

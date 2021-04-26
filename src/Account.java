@@ -38,10 +38,6 @@ public class Account {
 		return STK;
 	}
 
-	public void setSTK(String sTK) {
-		STK = sTK;
-	}
-
 	public String getPassWord() {
 		return PassWord;
 	}
@@ -52,10 +48,6 @@ public class Account {
 
 	public String getName() {
 		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getAddress() {
@@ -86,12 +78,6 @@ public class Account {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		String dateFormat = formatter.format(birthday);
 		return dateFormat;
- 
-		
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
 	}
 }
 
